@@ -1,0 +1,6 @@
+C:\Users\swetha\source\repos\MVC\CRUDUsingWebApi\obj\Debug\netcoreapp3.1\CRUDUsingWebApi.csproj.AssemblyReference.cache
+C:\Users\swetha\source\repos\MVC\CRUDUsingWebApi\obj\Debug\netcoreapp3.1\CRUDUsingWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\swetha\source\repos\MVC\CRUDUsingWebApi\obj\Debug\netcoreapp3.1\CRUDUsingWebApi.AssemblyInfoInputs.cache
+C:\Users\swetha\source\repos\MVC\CRUDUsingWebApi\obj\Debug\netcoreapp3.1\CRUDUsingWebApi.AssemblyInfo.cs
+C:\Users\swetha\source\repos\MVC\CRUDUsingWebApi\obj\Debug\netcoreapp3.1\CRUDUsingWebApi.csproj.CoreCompileInputs.cache
+C:\Users\swetha\source\repos\MVC\CRUDUsingWebApi\obj\Debug\netcoreapp3.1\CRUDUsingWebApi.MvcApplicationPartsAssemblyInfo.cache

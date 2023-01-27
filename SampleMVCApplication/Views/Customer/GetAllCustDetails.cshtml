@@ -1,0 +1,92 @@
+﻿@model IEnumerable<SampleMVCApplication.Models.CustomerModel>
+
+@{
+    ViewBag.Title = "GetAllCustDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel">
+    <div class="panel-body">
+        @using (Html.BeginForm("Search","Customer",FormMethod.Get))
+        {
+            <div class="form-group">
+                <label>Input Customer Name to search for: </label>
+                @Html.TextBox("name")
+            </div>
+            <div class="form-group">
+                <input id="SearchButton" type="submit" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+    
+</div>
+<h2>GetAllCustDetails</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddCustomer")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustId)
+        </th>
+        <th>
+            @Html.ActionLink("Name", "GetAllCustDetails", new { sortOrder = ViewBag.NameSortParm })
+
+        </th>
+        <th>
+            @Html.ActionLink("Age", "GetAllCustDetails", new { sortOrder = ViewBag.AgeSortParm })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.ActionLink("City", "GetAllCustDetails", new { sortOrder = ViewBag.CitySortParm })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditCustDetails", new {id = item.CustId /* id=item.PrimaryKey */
+            }) |
+            
+            @Html.ActionLink("Delete", "DeleteCust", new { id = item.CustId /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
